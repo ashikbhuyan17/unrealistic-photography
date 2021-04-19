@@ -7,7 +7,7 @@ const BookingList = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const [bookItem, setBookItem] = React.useState([])
     React.useEffect(() => {
-        fetch('http://localhost:9000/bookCollection?email=' + loggedInUser.email)
+        fetch('https://enigmatic-journey-08819.herokuapp.com/bookCollection?email=' + loggedInUser.email)
             .then(res => res.json())
             .then(data => {
                 // console.log(data[0])

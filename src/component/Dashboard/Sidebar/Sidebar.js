@@ -11,7 +11,7 @@ const Sidebar = () => {
     const [isAdmin, setIsAdmin] = React.useState(false)
 
     React.useEffect(() => {
-        fetch('http://localhost:9000/isAdmin', {
+        fetch('https://enigmatic-journey-08819.herokuapp.com/isAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loggedInUser.email })
@@ -67,18 +67,24 @@ const Sidebar = () => {
                         <i class="far fa-comment-alt me-3" /> <span>Review</span>
                     </Link>
                 </li>
-
-
-
                 <li>
-                    <Link to="/doctor/setting" className="text-white" >
-                        <FontAwesomeIcon icon={faCog} /> <span>Setting</span>
+                    <Link to="/" className="text-white">
+                        😋 <span>Back To Home</span>
                     </Link>
                 </li>
+
+                {/* <li>
+                    <Link to='/login'>{loggedInUser.email ? <Link to='/home' className='position' onClick={() => setLoggedInUser('')}>Sing Out</Link> : 'Sing In'}</Link>
+                </li> */}
+                <li>
+                    {loggedInUser.email ? <Link to="/" className="text-white" onClick={() => setLoggedInUser('')}><FontAwesomeIcon icon={faSignOutAlt} /> <span>Logout</span></Link> :
+                        <Link to="/" className="text-white"><FontAwesomeIcon icon={faSignOutAlt} /> <span>LogIn</span></Link>}
+                </li>
             </ul>
-            <div>
-                <Link to="/" className="text-white"><FontAwesomeIcon icon={faSignOutAlt} /> <span>Logout</span></Link>
-            </div>
+            {/* <div>
+                {loggedInUser.email ? <Link to="/" className="text-white" onClick={() => setLoggedInUser('')}><FontAwesomeIcon icon={faSignOutAlt} /> <span>Logout</span></Link> :
+                    <Link to="/" className="text-white"><FontAwesomeIcon icon={faSignOutAlt} /> <span>LogIn</span></Link>}
+            </div> */}
         </div>
     );
 };

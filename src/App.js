@@ -24,7 +24,7 @@ function App() {
   const [isAdmin, setIsAdmin] = React.useState(false)
 
   useEffect(() => {
-    fetch('http://localhost:9000/isAdmin', {
+    fetch('https://enigmatic-journey-08819.herokuapp.com/isAdmin', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ email: loggedInUser.email })

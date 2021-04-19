@@ -13,7 +13,7 @@ const OrderListDetails = ({ list }) => {
     //     console.log(e.target.value);
     //     // setUpdate(e.target.value)
     //     let update = e.target.value
-    //     fetch(`http://localhost:9000/update/${id}`, {
+    //     fetch(`https://enigmatic-journey-08819.herokuapp.com/update/${id}`, {
     //         method: 'PATCH',
     //         headers: {
     //             "content-type": 'application/json'

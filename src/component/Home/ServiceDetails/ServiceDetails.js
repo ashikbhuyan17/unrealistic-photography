@@ -15,7 +15,7 @@ const ServiceDetails = () => {
     const { id } = useParams()
     // console.log("id is ", id);
     React.useEffect(() => {
-        fetch(`http://localhost:9000/service/${id}`)
+        fetch(`https://enigmatic-journey-08819.herokuapp.com/service/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 // console.log(data);
@@ -33,6 +33,7 @@ const ServiceDetails = () => {
     const onSubmit = data => {
         const newInformation = { ...service, ...loggedInUser }
         // console.log(newInformation)
+        history.push('/home')
 
     };
 
@@ -48,7 +49,7 @@ const ServiceDetails = () => {
             orderTime: new Date()
         }
         console.log("newInfo ", newInformation);
-        fetch('http://localhost:9000/addBooking', {
+        fetch('https://enigmatic-journey-08819.herokuapp.com/addBooking', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newInformation)
@@ -62,6 +63,7 @@ const ServiceDetails = () => {
                 }
 
             })
+        history.push('/home')
         e.preventDefault();
     }
     return (

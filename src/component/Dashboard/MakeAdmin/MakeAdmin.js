@@ -7,7 +7,7 @@ const MakeAdmin = () => {
 
     const onSubmit = data => {
         console.log(data);
-        fetch('http://localhost:9000/makeAdmin', {
+        fetch('https://enigmatic-journey-08819.herokuapp.com/makeAdmin', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

@@ -10,7 +10,7 @@ const Testomonial = () => {
 
     useEffect(() => {
 
-        fetch("http://localhost:9000/addReview")
+        fetch("https://enigmatic-journey-08819.herokuapp.com/addReview")
             .then(res => res.json())
             .then(data => setTestimonial(data))
     }, [])

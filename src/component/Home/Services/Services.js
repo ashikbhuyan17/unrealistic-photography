@@ -12,7 +12,7 @@ const Services = ({ servicesWork }) => {
             <div className="card-section">
                 <div className="services-container text-center">
                     {/* <img src={servicesWork.photo} alt="" /> */}
-                    {/* <img src={`http://localhost:9000/:image/jpeg;base64,${data}`} /> */}
+                    {/* <img src={`https://enigmatic-journey-08819.herokuapp.com/:image/jpeg;base64,${data}`} /> */}
 
                     {
                         servicesWork.image && <img src={`data:image/jpeg;base64,${servicesWork.image.img}`} />

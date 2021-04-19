@@ -20,7 +20,7 @@ const Review = () => {
             ...info,
             imageURL: imageURL
         }
-        fetch('http://localhost:9000/addReview', {
+        fetch('https://enigmatic-journey-08819.herokuapp.com/addReview', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

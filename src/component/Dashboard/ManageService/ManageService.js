@@ -6,7 +6,7 @@ const ManageService = () => {
     const [serviceList, setServiceList] = React.useState([])
     const [render, setRender] = React.useState(1);
     React.useEffect(() => {
-        fetch("http://localhost:9000/service")
+        fetch("https://enigmatic-journey-08819.herokuapp.com/service")
             .then(res => res.json())
             .then(data => setServiceList(data))
     }, [render])
@@ -14,7 +14,7 @@ const ManageService = () => {
     function deleteService(id, event) {
         // const hidden = 
         console.log("delete", id)
-        fetch(`http://localhost:9000/delete/${id}`, {
+        fetch(`https://enigmatic-journey-08819.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

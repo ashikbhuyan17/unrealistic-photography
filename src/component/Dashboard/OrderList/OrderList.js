@@ -6,7 +6,7 @@ import Sidebar from '../Sidebar/Sidebar';
 const OrderList = () => {
     const [orderList, setOrderList] = useState([])
     React.useEffect(() => {
-        fetch("http://localhost:9000/getBooking")
+        fetch("https://enigmatic-journey-08819.herokuapp.com/getBooking")
             .then(res => res.json())
             .then(data => setOrderList(data))
     }, [])

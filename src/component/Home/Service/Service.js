@@ -8,41 +8,15 @@ import Services from '../Services/Services';
 const Service = () => {
     const [serviceData, setServiceData] = useState([])
 
-    const ServicesItem = [
-        {
-            name: 'Wedding Photography',
-            about: '  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error laboriosam at a iure odio sapiente! Unde numquam enim ullam fuga odio laboriosam est, nobis corporis labore, velit quas modi deleniti!',
-            price: 123,
-            photo: photo,
-            id: 1
-
-
-        },
-        {
-            name: 'Stylish Photography',
-            about: '  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error laboriosam at a iure odio sapiente! Unde numquam enim ullam fuga odio laboriosam est, nobis corporis labore, velit quas modi deleniti!',
-            price: 144,
-            photo: photo2,
-            id: 2
-
-
-        },
-        {
-            name: 'Child Photography',
-            about: '  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error laboriosam at a iure odio sapiente! Unde numquam enim ullam fuga odio laboriosam est, nobis corporis labore, velit quas modi deleniti!',
-            price: 110,
-            photo: photo3,
-            id: 3
-
-
-        }
-    ]
 
 
 
-    fetch("http://localhost:9000/service")
-        .then(res => res.json())
-        .then(data => setServiceData(data))
+
+    useEffect(() => {
+        fetch("https://enigmatic-journey-08819.herokuapp.com/service")
+            .then(res => res.json())
+            .then(data => setServiceData(data))
+    }, [])
 
     // console.log("data was ", serviceData);
     return (
