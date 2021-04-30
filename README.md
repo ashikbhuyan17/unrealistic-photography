@@ -4,10 +4,10 @@ Unrealistic Photography
 
 
 ### Project Features :
-1. Home page => Where dynamic data show and have a button and when the button click show details page 
-2. Details page => Where dynamic data is displayed via ID There are more information also a Explore button . when we click Explore button that's time our Details page  data show.
-3. There is a admin page where we can upload our service or we can delete/update our service .
-4. there are two system which are admin and user when user login her/his email then enter dashboard page.
+1. Responsive MERN Stack app with firebase and admin authentication,dashboard functionality for Admin and User
+2. Customer can book service,check status, and able to give their feedback
+3. Admin can modifier their service and add new admin and also change order list
+
 
 ### Website live link : [https://service-mern.web.app/]
 
